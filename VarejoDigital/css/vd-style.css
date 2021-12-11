@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;   /*faz a troca de pagina de modo suave*/
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../imagens/varejo.jpg');
+    background-size: cover;   /*referencia o centro da imagem*/
+}
+
+.banner .content{   /*centralizar a frase*/
+    max-width: 900px;
+    text-align: center;
+}
+
+.banner .content h2{
+    font-size: 4.5em;
+    color: #fff;
+}
+.banner .content p{
+    font-size: 1em;
+    color: #fff;
+}
+
+.btn{
+    font-size: 1em;
+    color: #fff;
+    background: #386641;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;   /*deixar a palavra maiuscula*/
+    text-decoration: none;
+    letter-spacing: 2px;   /*epaçamento entre as letras*/
+    transition: 0.5s;
+}
+.btn:hover{
+    letter-spacing: 5px /*devido ao espaçamento das letras, da uma impresão de esticamento*/
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    /* box-shadow:0 0px 35px rgba(0,0,0,0.08);     */
+}
+
+header.stick{     /*tag criada para jogar dentro da função js e pegala com toggle*/
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0, 0.08);
+}
+
+header .logo{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+}
+header.stick .logo{  /*quando descer a tela, fica preto com a função js*/
+    color: #5B2E90;  
+}
+
+header .logo span{
+    color: #386641;
+   /* font-size: 2em;   /*testando o tamanho do ponto*/
+}
+
+header .navigation{
+    position: relative;
+    display: flex;
+}
+header .navigation li{
+    list-style: none;  /*remove a marcação*/
+    margin-left: 30px;
+}
+header .navigation li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;  /*deixa com tom negrito*/
+}
+header.stick .navigation li a{
+    color: #5B2E90;
+}
+header .navigation li a:hover{
+    color: #386641;
+}
+
+/* ################################################# */
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.titleText{
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+}
+.titleText span{
+    color: #386641;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+/* #################################################*/
+
+section{
+    padding: 100px;
+}
+
+/* ################################################## */
+
+.menu .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.menu .content .box{
+    width: 340px;
+    height: 430px;  /*Verificar posição do boão comprar*/
+    margin: 20px;
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+
+/*formatando imagens dos box*/
+.menu .content .box .imgBx{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.menu .content .box .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /*deixa a imagem com foco no centro*/
+}
+
+.menu .content .box .text{
+    padding: 15px 0 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.comprar{
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: #5B2E90;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    left: 30%;
+}
+.comprar:hover{
+    background-color: #386641;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+.comprar h3{
+    font-size: 1em;
+    color: #e9ecef;
+    text-align: center;
+}
+.menu .content .box .text h3{
+    font-weight: 400;
+    color: #111;
+    font-size: 20px;
+}
+
+/*copyroght   ----- footer*/
+.copyrightText{
+    padding: 20px 40px;
+    border-top: 1px solid rgba(0,0, 0,0.1);
+    text-align: center;
+    background-color: #386641;
+}
+.copyrightText p{
+    color: #e9ecef;
+}
+
+
+@media (max-width: 991px){
+    header, header.stick{
+        padding: 10px 20px;
+    }
+
+    header .navigation{
+        display: none;
+    }
+
+    header .navigation.active{
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+    header .navigation li{
+        margin-left: 0;
+    }
+    header .navigation li a{
+        color: #111;
+        font-size: 1.6em;
+    }
+
+    .menuToggle{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(../imagens/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+         
+    }
+    .menuToggle.active{
+        background: url(../imagens/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    header.stick .menuToggle{
+        filter: invert(1);  /*faz aparecer o menu burger*/
+    }
+    section{
+        padding: 20px;
+    }
+    .banner .content h2{
+        font-size: 3em;
+        color: #fff;
+    }
+    .menu .content{
+        margin-top: 20px;
+    }
+    .menu .content .box{
+        margin: 10px;
+        height: 380px;
+    }
+    /*Redimencionamento dos pratos*/
+    .menu .content .box .imgBx{
+        height: 260px;
+    }
+    .title{
+        text-align: center;
+    }
+    .titleText{
+        font-size: 1.8em;
+        line-height: 1.5em;
+        margin-bottom: 15px;
+        font-weight: 300;
+    }
+}
+@media (max-width: 480px){
+    .banner .content h2{
+        font-size: 2.2em;
+        color: #fff;
+    }
+}

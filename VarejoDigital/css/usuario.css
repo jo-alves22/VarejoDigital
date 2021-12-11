@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    position: relative;
+    background-image: url(../imagens/varejo.jpg);
+}
+
+.dados{
+    width: 65%;
+    margin-left: 30px;
+}
+.dados h1{
+    margin-bottom: 20px;
+    color: #386641;
+}
+.dados input{
+    width: 400px;
+    margin-bottom: 10px;
+}
+.dados input[type=text]{
+    padding: 5px;
+}
+.cadusuario{
+    display: flex;
+    width: 900px;
+    border: solid 1px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+.aside{
+    background-color: #5B2E90;
+    width: 35%;
+    text-align: center;
+    padding: 200px 60px 200px 60px;
+}
+.aside h2{
+    color: #FCB10B;
+    font-size: 30px;
+}
+.aside h1{
+    color: white;
+    font-size: 40px;
+}
+.label{
+    margin: 0;
+}
+
+.cadastrar{
+    background-color: #FCB10B;
+    padding: 5px;
+}

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    position: relative;
+    background-image: url(../imagens/varejo.jpg);
+}
+
+.login{
+    display: flex;
+    width: 650px;
+    border: solid 1px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.plataforma{
+    background-color: #5B2E90;
+    width: 35%;
+    text-align: center;
+    padding: 200px 60px 200px 60px;
+}
+.plataforma h2{
+    color: #FCB10B;
+    font-size: 30px;
+}
+.plataforma h1{
+    color: white;
+    font-size: 40px;
+}
+
+
+.user{
+    width: 65%;
+    margin-left: 50px;
+    margin-right: 150px;
+    text-align: center;
+}
+.user h2{
+    color: #5B2E90;
+    padding: 20px;
+}
+.user input{
+    width: 300px;
+    height: 35px;
+    font-size: 17px;
+}
+.logar{
+    background-color: #FCB10B;
+}
+
+.home{
+    cursor: pointer;
+    background-color: #386641;
+    width: 100px;
+    height: 30px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+.home a{
+    text-decoration: none;
+    color: #fff;
+}
+.home:hover{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
